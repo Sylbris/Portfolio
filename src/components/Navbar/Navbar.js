@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import ProjectsTab from './ProjectsTab/ProjectsTab';
 import AboutTab from './AboutTab/AboutTab';
+import bg from '../../assets/bg.jpg';
+import SkillsTab from './SkillsTab/SkillsTab';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,8 +50,8 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <Box sx={{ width: '100%'  }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
           <Tab label="About" {...a11yProps(0)} />
           <Tab label="Projects" {...a11yProps(1)} />
@@ -63,7 +65,7 @@ export default function BasicTabs() {
         <ProjectsTab />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <SkillsTab />
       </TabPanel>
     </Box>
   );
